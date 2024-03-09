@@ -9,6 +9,7 @@ target_tasks:
   - find papers that relevant to a topic
   - find scholars that have the queried research interests
   - A search engine retrieving top search results as snippets from Google
+  - Path to the PDF file to be read
 prompt_template: !prompt VanillaPrompt
 llm: 
   model_name: gpt-4-0613
@@ -35,3 +36,4 @@ plugins:
         type: str
         description: a search query
     class: GoogleSearch
+  - name: pdf_reading

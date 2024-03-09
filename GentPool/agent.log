@@ -8,35 +8,48 @@ INFO:root:[green]User:
 INFO:root:mynewagent is thinking...
 INFO:root:Done
 INFO:root:[blue]mynewagent: 
-INFO:root:{"name":"google_search", "arguments":{
-  "query": "nlp"
+INFO:root:{"name":"pdf_reading", "arguments":{
+  "file_path": "samplefile.pdf"
 }}
 
-INFO:root:Calling function: google_search ...
+INFO:root:Calling function: pdf_reading ...
 INFO:root:Done
 INFO:root:--------------------
-INFO:root:SearchResult(url=https://www.ibm.com/topics/natural-language-processing, title=What is Natural Language Processing?, description=Natural language processing, or NLP, combines computational linguistics—rule-based modeling of human language—with statistical and machine learning models to ...)
-
-SearchResult(url=https://en.wikipedia.org/wiki/Neuro-linguistic_programming, title=Neuro-linguistic programming, description=Neuro-linguistic programming (NLP) is a pseudoscientific approach to communication, personal development and psychotherapy, that first appeared in Richard ...)
-
-SearchResult(url=https://www.nlp.com/what-is-nlp/, title=What is NLP?, description=NLP is the study of excellent communication–both with yourself, and with others. It was developed by modeling excellent communicators and therapists who got ...)
-
-SearchResult(url=https://en.wikipedia.org/wiki/Natural_language_processing, title=Natural language processing, description=Natural language processing (NLP) is an interdisciplinary subfield of computer science and linguistics. It is primarily concerned with giving computers the ...)
-
-SearchResult(url=https://www.deeplearning.ai/resources/natural-language-processing/, title=Natural Language Processing (NLP) [A Complete Guide], description=Jan 11, 2023 — Natural language processing (NLP) is the discipline of building machines that can manipulate human language — or data that resembles human ...)
-
-SearchResult(url=https://hbr.org/2022/04/the-power-of-natural-language-processing, title=The Power of Natural Language Processing, description=Apr 19, 2022 — The most visible advances have been in what's called “natural language processing” (NLP), the branch of AI focused on how computers can process ...)
-
-SearchResult(url=https://www.medicalnewstoday.com/articles/320368, title=Neuro-linguistic programming (NLP): Does it work?, description=Dec 20, 2017 — Neuro-linguistic programming (NLP) is a way of changing someone's thoughts and behaviors to help achieve desired outcomes for them.)
-
-SearchResult(url=https://www.techtarget.com/searchenterpriseai/definition/natural-language-processing-NLP, title=What is natural language processing? | Definition from ..., description=Natural language processing (NLP) is the ability of a computer program to understand human language as it's spoken and written -- referred to as natural ...)
-
-SearchResult(url=https://anlp.org/knowledge-base/definition-of-nlp, title=Definition of NLP - The Association for Neuro Linguistic ..., description=NLP comprises models, techniques and strategies to help us understand how the language we use influences the way we think and the results we get!)
-
-SearchResult(url=https://monkeylearn.com/natural-language-processing/, title=Natural Language Processing (NLP): What Is It & How ..., description=Natural Language Processing (NLP) allows machines to break down and interpret human language. It's at the core of tools we use every day – from translation ...)
-
-SearchResult(url=https://machinelearningmastery.com/natural-language-processing/, title=What Is Natural Language Processing?, description=Aug 7, 2019 — Natural language processing (NLP) is a collective term referring to automatic computational processing of human languages. This includes both ...)
+INFO:root:Hello this is the sample pdf for testing the pdf reading. 
 INFO:root:--------------------
 INFO:root:mynewagent is thinking...
 INFO:root:Done
 INFO:root:[blue]mynewagent: 
+INFO:root:The content of the PDF file "samplefile.pdf" is: "Hello this is the sample pdf for testing the pdf reading."
+INFO:root:Done
+INFO:root:[green]User: 
+INFO:root:mynewagent is thinking...
+INFO:root:Done
+INFO:root:[blue]mynewagent: 
+INFO:root:{"name":"search_single_paper", "arguments":{
+"title": "gentopia",
+"top_k": 1
+}}
+
+INFO:root:Calling function: search_single_paper ...
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=gentopia
+INFO:httpx:HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=gentopia "HTTP/1.1 200 OK"
+INFO:scholarly:Got a captcha request.
+INFO:scholarly:Exception AttributeError while fetching page: ("'str' object has no attribute 'domain'",)
+INFO:scholarly:Retrying with a new session.
+INFO:httpx:HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=gentopia "HTTP/1.1 200 OK"
+INFO:scholarly:Got a captcha request.
+INFO:scholarly:Exception AttributeError while fetching page: ("'str' object has no attribute 'domain'",)
+INFO:scholarly:Retrying with a new session.
+INFO:httpx:HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=gentopia "HTTP/1.1 200 OK"
+INFO:scholarly:Got a captcha request.
+INFO:scholarly:Exception AttributeError while fetching page: ("'str' object has no attribute 'domain'",)
+INFO:scholarly:Retrying with a new session.
+INFO:httpx:HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=gentopia "HTTP/1.1 200 OK"
+INFO:scholarly:Got a captcha request.
+INFO:scholarly:Exception AttributeError while fetching page: ("'str' object has no attribute 'domain'",)
+INFO:scholarly:Retrying with a new session.
+INFO:httpx:HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=gentopia "HTTP/1.1 200 OK"
+INFO:scholarly:Got a captcha request.
+INFO:scholarly:Exception AttributeError while fetching page: ("'str' object has no attribute 'domain'",)
+INFO:scholarly:Retrying with a new session.
